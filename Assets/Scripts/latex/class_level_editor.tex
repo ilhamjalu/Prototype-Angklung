@@ -1,0 +1,323 @@
+\hypertarget{class_level_editor}{}\doxysection{Level\+Editor Class Reference}
+\label{class_level_editor}\index{LevelEditor@{LevelEditor}}
+
+
+Inheritance diagram for Level\+Editor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_level_editor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Editor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_level_editor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01}{Start\+Or\+Stop\+Recording}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_level_editor_a380ac75391d6d6c8419d0e4578556f25}{text}}
+\item 
+string \mbox{\hyperlink{class_level_editor_a1b5519a385b37d7e19116c988c56183a}{file\+Name}}
+\item 
+float \mbox{\hyperlink{class_level_editor_abd31f1e1c58dd5267f63d0d2737d1510}{delay}} = 0.\+2f
+\item 
+Audio\+Source \mbox{\hyperlink{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}{music}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}{Save\+Json}} ()
+\item 
+void \mbox{\hyperlink{class_level_editor_a75d4bf0d2cfc801dcc66b356c19b3bde}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_level_editor_a2267d392ae448ff4c82cf15d0d16a256}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}
+\item 
+bool \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}}
+\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}} = new bool\mbox{[}5\mbox{]}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}} = new float\mbox{[}5\mbox{]}
+\item 
+Key\+Code\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}} = \{Key\+Code.\+A, Key\+Code.\+S, Key\+Code.\+D, Key\+Code.\+J, Key\+Code.\+K\}
+\item 
+string \mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}}
+\item 
+List$<$ \mbox{\hyperlink{class_block}{Block}} $>$ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}\label{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}} 
+\index{LevelEditor@{LevelEditor}!SaveJson@{SaveJson}}
+\index{SaveJson@{SaveJson}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{SaveJson()}{SaveJson()}}
+{\footnotesize\ttfamily void Level\+Editor.\+Save\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ path\ =\ Application.persistentDataPath\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ \mbox{\hyperlink{class_level_editor_a1b5519a385b37d7e19116c988c56183a}{fileName}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ StreamWriter\ writer\ =\ \textcolor{keyword}{new}\ StreamWriter(path,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ writer.WriteLine(\mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ writer.Close();}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_level_editor_a75d4bf0d2cfc801dcc66b356c19b3bde}\label{class_level_editor_a75d4bf0d2cfc801dcc66b356c19b3bde}} 
+\index{LevelEditor@{LevelEditor}!Start@{Start}}
+\index{Start@{Start}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Level\+Editor.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}\ =\ \textcolor{keyword}{new}\ List<Block>();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ Debug.Log(Application.persistentDataPath);}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01}\label{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01}} 
+\index{LevelEditor@{LevelEditor}!StartOrStopRecording@{StartOrStopRecording}}
+\index{StartOrStopRecording@{StartOrStopRecording}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{StartOrStopRecording()}{StartOrStopRecording()}}
+{\footnotesize\ttfamily void Level\+Editor.\+Start\+Or\+Stop\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_blocks}{Blocks}}\ blocks\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_blocks}{Blocks}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ blocks.block\ =\ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}.ToArray();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}}\ =\ JsonUtility.ToJson(blocks);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(result);}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}{SaveJson}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}{music}}.Play();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_level_editor_a2267d392ae448ff4c82cf15d0d16a256}\label{class_level_editor_a2267d392ae448ff4c82cf15d0d16a256}} 
+\index{LevelEditor@{LevelEditor}!Update@{Update}}
+\index{Update@{Update}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Level\+Editor.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}})}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}.Length;\ i++)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i])}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ +=\ Time.deltaTime;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetKeyDown(\mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}[i]))}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ =\ 0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetKeyUp(\mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}[i]))}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Pressing\ "{}}\ +\ i\ +\ \textcolor{stringliteral}{"{}\ from\ "{}}\ +\ (\mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ -\/\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i])\ +\ \textcolor{stringliteral}{"{}\ for\ "{}}\ +\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ +\ \textcolor{stringliteral}{"{}s"{}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block}{Block}}\ newBlock\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_block}{Block}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.track\ =\ i;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.start\ =\ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ -\/\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i];}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.length\ =\ (\mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ <\ 0.2f)\ ?\ 0f\ :\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i];}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}.Add(newBlock);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(block);}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}\label{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}} 
+\index{LevelEditor@{LevelEditor}!block@{block}}
+\index{block@{block}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{block}{block}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_block}{Block}}$>$ Level\+Editor.\+block\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_abd31f1e1c58dd5267f63d0d2737d1510}\label{class_level_editor_abd31f1e1c58dd5267f63d0d2737d1510}} 
+\index{LevelEditor@{LevelEditor}!delay@{delay}}
+\index{delay@{delay}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily float Level\+Editor.\+delay = 0.\+2f}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_a1b5519a385b37d7e19116c988c56183a}\label{class_level_editor_a1b5519a385b37d7e19116c988c56183a}} 
+\index{LevelEditor@{LevelEditor}!fileName@{fileName}}
+\index{fileName@{fileName}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily string Level\+Editor.\+file\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}\label{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}} 
+\index{LevelEditor@{LevelEditor}!hold@{hold}}
+\index{hold@{hold}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{hold}{hold}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} Level\+Editor.\+hold = new float\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}\label{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}} 
+\index{LevelEditor@{LevelEditor}!keys@{keys}}
+\index{keys@{keys}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily Key\+Code \mbox{[}$\,$\mbox{]} Level\+Editor.\+keys = \{Key\+Code.\+A, Key\+Code.\+S, Key\+Code.\+D, Key\+Code.\+J, Key\+Code.\+K\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}\label{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}} 
+\index{LevelEditor@{LevelEditor}!music@{music}}
+\index{music@{music}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{music}{music}}
+{\footnotesize\ttfamily Audio\+Source Level\+Editor.\+music}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_acd33bf89076f117689ead10f6682b0f6}\label{class_level_editor_acd33bf89076f117689ead10f6682b0f6}} 
+\index{LevelEditor@{LevelEditor}!pressing@{pressing}}
+\index{pressing@{pressing}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{pressing}{pressing}}
+{\footnotesize\ttfamily bool \mbox{[}$\,$\mbox{]} Level\+Editor.\+pressing = new bool\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}\label{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}} 
+\index{LevelEditor@{LevelEditor}!result@{result}}
+\index{result@{result}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily string Level\+Editor.\+result\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_a748d12242c36a05a87544b43fb11cbac}\label{class_level_editor_a748d12242c36a05a87544b43fb11cbac}} 
+\index{LevelEditor@{LevelEditor}!start@{start}}
+\index{start@{start}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool Level\+Editor.\+start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_a380ac75391d6d6c8419d0e4578556f25}\label{class_level_editor_a380ac75391d6d6c8419d0e4578556f25}} 
+\index{LevelEditor@{LevelEditor}!text@{text}}
+\index{text@{text}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily TMP\+\_\+\+Text Level\+Editor.\+text}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+\mbox{\Hypertarget{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}\label{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}} 
+\index{LevelEditor@{LevelEditor}!time@{time}}
+\index{time@{time}!LevelEditor@{LevelEditor}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Level\+Editor.\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_editor_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_level_editor_8cs_source}{Level\+Editor.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_level_editor_8cs}{Level\+Editor.\+cs}}\end{DoxyCompactItemize}

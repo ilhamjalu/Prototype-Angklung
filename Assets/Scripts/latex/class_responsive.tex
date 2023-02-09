@@ -1,0 +1,115 @@
+\hypertarget{class_responsive}{}\doxysection{Responsive Class Reference}
+\label{class_responsive}\index{Responsive@{Responsive}}
+
+
+Inheritance diagram for Responsive\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_responsive__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Responsive\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_responsive__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_responsive_a72c09bf252d8d2c0a19c74b57e5bcde7}{scene\+Width}} = 10
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_responsive_a91a81e0e634d8a7c7c17e012e4e8a455}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_responsive_a542ecba291052d10c947ee8724f0d00f}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_responsive_a102a54ac3846f052075c0d933edb18d0}{\+\_\+camera}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_responsive_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_responsive_8cs_source}{Responsive.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_responsive_a91a81e0e634d8a7c7c17e012e4e8a455}\label{class_responsive_a91a81e0e634d8a7c7c17e012e4e8a455}} 
+\index{Responsive@{Responsive}!Start@{Start}}
+\index{Start@{Start}!Responsive@{Responsive}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Responsive.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_responsive_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_responsive_8cs_source}{Responsive.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_responsive_a102a54ac3846f052075c0d933edb18d0}{\_camera}}\ =\ GetComponent<Camera>();}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_responsive_a542ecba291052d10c947ee8724f0d00f}\label{class_responsive_a542ecba291052d10c947ee8724f0d00f}} 
+\index{Responsive@{Responsive}!Update@{Update}}
+\index{Update@{Update}!Responsive@{Responsive}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Responsive.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_responsive_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_responsive_8cs_source}{Responsive.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ unitsPerPixel\ =\ \mbox{\hyperlink{class_responsive_a72c09bf252d8d2c0a19c74b57e5bcde7}{sceneWidth}}\ /\ Screen.width;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ desiredHalfHeight\ =\ 0.5f\ *\ unitsPerPixel\ *\ Screen.height;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \_camera.orthographicSize\ =\ desiredHalfHeight;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_responsive_a102a54ac3846f052075c0d933edb18d0}\label{class_responsive_a102a54ac3846f052075c0d933edb18d0}} 
+\index{Responsive@{Responsive}!\_camera@{\_camera}}
+\index{\_camera@{\_camera}!Responsive@{Responsive}}
+\doxysubsubsection{\texorpdfstring{\_camera}{\_camera}}
+{\footnotesize\ttfamily Camera Responsive.\+\_\+camera\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_responsive_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_responsive_8cs_source}{Responsive.\+cs}}.
+
+\mbox{\Hypertarget{class_responsive_a72c09bf252d8d2c0a19c74b57e5bcde7}\label{class_responsive_a72c09bf252d8d2c0a19c74b57e5bcde7}} 
+\index{Responsive@{Responsive}!sceneWidth@{sceneWidth}}
+\index{sceneWidth@{sceneWidth}!Responsive@{Responsive}}
+\doxysubsubsection{\texorpdfstring{sceneWidth}{sceneWidth}}
+{\footnotesize\ttfamily float Responsive.\+scene\+Width = 10}
+
+
+
+Definition at line \mbox{\hyperlink{_responsive_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_responsive_8cs_source}{Responsive.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_responsive_8cs}{Responsive.\+cs}}\end{DoxyCompactItemize}

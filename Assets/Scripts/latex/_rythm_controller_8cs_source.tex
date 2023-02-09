@@ -1,0 +1,258 @@
+\hypertarget{_rythm_controller_8cs_source}{}\doxysection{Rythm\+Controller.\+cs}
+\mbox{\hyperlink{_rythm_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00008}\mbox{\hyperlink{class_rythm_controller}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rythm_controller}{RythmController}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00010}\mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00011}\mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject[]\ \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00012}\mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_button_controller}{ButtonController}}[]\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00013}\mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}}\ =\ 200f;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00014}\mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_blocks}{Blocks}}\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_blocks}{Blocks}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00015}\mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ KeyCode[]\ \mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}}\ =\ \{\ KeyCode.A,\ KeyCode.S,\ KeyCode.D,\ KeyCode.J,\ KeyCode.K\ \};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00016}\mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}}\ =\ 0.7f;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00017}\mbox{\hyperlink{class_rythm_controller_a6ee5350ca8b5f94f9a7d243e2844cda6}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \mbox{\hyperlink{class_rythm_controller_a6ee5350ca8b5f94f9a7d243e2844cda6}{scoreText}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00018}\mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00019}\mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00020}\mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{00020}}\ \ \ \ \ AudioSource\ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00021}\mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject[]\ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00022}\mbox{\hyperlink{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ \mbox{\hyperlink{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}{starInactive}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00024}\mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orbType}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00025}\mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00027}\mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{00027}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00028}\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{00028}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00029}\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{00029}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00030}\mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{00030}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00031}\mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00032}\mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{00032}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00034}\mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{00034}}\ \ \ \ \ Vector3\ \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00035}\mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{00035}}\ \ \ \ \ Vector2\ \mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touchPosWorld2D}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00036}\mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{00036}}\ \ \ \ \ RaycastHit2D\ \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00038}00038\ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Dont\ Touch"{}})]}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00039}\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_orb}{Orb}}[]\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00041}00041\ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Scoring"{}})]}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00042}\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00043}\mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00044}\mbox{\hyperlink{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}{scoreIncrement}}\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00045}\mbox{\hyperlink{class_rythm_controller_af6276464bf75cb0f4c7f1b58641cb7eb}{00045}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_af6276464bf75cb0f4c7f1b58641cb7eb}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orbType}}\ =\ PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}orbType"{}});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}\ =\ GetComponent<AudioSource>();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(GameObject\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_button_controller}{ButtonController}}\ button\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ button.controller\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//float\ distance\ =\ spawner[0].transform.position.y\ -\/\ buttons[0].transform.position.y;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(distance);}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//baiting}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameObject\ newOrb\ =\ Instantiate(orb);}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ Orb\ orbCompponent\ =\ newOrb.GetComponent<Orb>();}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.track\ =\ 0;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.speed\ =\ blockSpeed;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.number\ =\ number;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.length\ =\ blocks.block[number].length;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.controller\ =\ this;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.SetTail();}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.bait\ =\ true;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ newOrb.transform.position\ =\ spawner[0].transform.position;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ newOrb.transform.position\ +=\ new\ Vector3(0f,\ 0f,\ 100000f);*/}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00079}\mbox{\hyperlink{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}{StartLevel}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}.Length;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ =\ blocks.block.Length\ *\ \mbox{\hyperlink{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}{scoreIncrement}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ =\ \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}}[0].transform.position.y\ -\/\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[0].transform.position.y;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}}\ =\ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ /\ \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00089}\mbox{\hyperlink{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e}{00089}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00090}00090\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ scoreText.text\ =\ \mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}+\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ overlay.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 0,\ Mathf.Lerp(\mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}}.color.a,\ 0f,\ 0.1f));}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}\ <\ \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ starting\ =\ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ /\ (\mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}}\ /\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}}\ >=\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_a43c55140bcd20929e35d1b2a631f4cd2}{start}}-\/\mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ track\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_a5ddac282eb5a8367e53c6641066d6c7e}{track}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ newOrb\ =\ Instantiate(\mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb}{Orb}}\ orbCompponent\ =\ newOrb.GetComponent<\mbox{\hyperlink{class_orb}{Orb}}>();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.track\ =\ track;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.speed\ =\ \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.number\ =\ \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.length\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_ad2f6e1c6aca6b7f743f7ab632e6535ee}{length}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.controller\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.\mbox{\hyperlink{class_orb_aab8f672dec11ddbd52e6ce96e965211e}{SetTail}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newOrb.transform.position\ =\ \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}}[track].transform.position;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//maxScore\ +=\ (orbCompponent.length\ >\ 0)\ ?\ ((int)(scoreIncrement\ *\ 2\ *\ orbCompponent.length))\ :\ 100;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}++;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(starting);}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.isPlaying)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_adb34454137f182246692c03c2f92036e}{EndLevel}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i]\ \&\&\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ >\ 0f\ \&\&\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].triggered\ +\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ <\ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{DestroyPressable}}(i);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Input.touchCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}\ =\ Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touchPosWorld2D}}\ =\ \textcolor{keyword}{new}\ Vector2(\mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}.x,\ \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}.y);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}\ =\ Physics2D.Raycast(\mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touchPosWorld2D}},\ Camera.main.transform.forward);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.collider);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.collider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//We\ should\ have\ hit\ something\ with\ a\ 2D\ Physics\ collider!}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ touchedObject\ =\ \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.transform.gameObject;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ =\ 0;\ x\ <\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}.Length;\ x++)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (touchedObject\ ==\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].gameObject)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (Input.GetTouch(i).phase)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TouchPhase.Began:}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}.color\ =\ \textcolor{keyword}{new}\ Color(.5f,\ .5f,\ .5f);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TouchPhase.Ended:}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}.color\ =\ \textcolor{keyword}{new}\ Color(1f,\ 1f,\ 1f);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//touchedObject\ should\ be\ the\ object\ someone\ touched.}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}Touched\ "{}\ +\ touchedObject.transform.name);}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ overlay.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 0,\ Mathf.Lerp(\mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}}.color.a,\ 0.8f,\ 0.1f));}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00171}\mbox{\hyperlink{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}{00171}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}{EnterTrigger}}\ (\mbox{\hyperlink{class_orb}{Orb}}\ \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00172}00172\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[\mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}}.track]\ =\ \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ orb.triggered\ =\ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00175}00175\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00177}\mbox{\hyperlink{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}{00177}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}{LeaveTrigger}}\ (\textcolor{keywordtype}{int}\ track)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00178}00178\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ <=\ 0f)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].success);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].success\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(pressable[track]);}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{DestroyPressable}}(track);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00190}00190\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00192}\mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{00192}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00193}00193\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ audioSource.volume\ =\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}ReturnVolume"{}},\ 0.5f);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00198}\mbox{\hyperlink{class_rythm_controller_adc27a15dff601c4bb7ec25138043e0d3}{00198}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_adc27a15dff601c4bb7ec25138043e0d3}{ReturnVolume}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00199}00199\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ audioSource.volume\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00203}\mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{00203}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{DestroyPressable}}(\textcolor{keywordtype}{int}\ track)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00204}00204\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track],\ 1f);}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//pressable[track]\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00209}\mbox{\hyperlink{class_rythm_controller_a440cd1078565fef00e92d40ac0dbd836}{00209}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_a440cd1078565fef00e92d40ac0dbd836}{Overlay}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00210}00210\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00213}00213\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00215}\mbox{\hyperlink{class_rythm_controller_affd1106b18976c56527875f9b13a7145}{00215}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_affd1106b18976c56527875f9b13a7145}{PauseOrPlay}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00216}00216\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.Pause();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}})}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.UnPause();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00230}00230\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00232}\mbox{\hyperlink{class_rythm_controller_adb34454137f182246692c03c2f92036e}{00232}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_adb34454137f182246692c03c2f92036e}{EndLevel}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00233}00233\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{comment}{//int\ section\ =\ maxScore\ /\ 3;}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.9)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.7)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.4)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}}[i].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ Image\ starSprite\ =\ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}}[i].GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ <=\ i)}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ starSprite.sprite\ =\ \mbox{\hyperlink{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}{starInactive}};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_affd1106b18976c56527875f9b13a7145}{PauseOrPlay}}();}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00248}\mbox{\hyperlink{class_rythm_controller_a656ae1f8795537aab6118a6c751d3f65}{00248}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rythm_controller_a656ae1f8795537aab6118a6c751d3f65}{Home}}()}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00249}00249\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ SceneManager.LoadScene(\textcolor{stringliteral}{"{}MainMenu"{}});}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rythm_controller_8cs_source_l00253}00253\ \}}
+
+\end{DoxyCode}

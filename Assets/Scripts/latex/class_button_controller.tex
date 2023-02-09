@@ -1,0 +1,319 @@
+\hypertarget{class_button_controller}{}\doxysection{Button\+Controller Class Reference}
+\label{class_button_controller}\index{ButtonController@{ButtonController}}
+
+
+Inheritance diagram for Button\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_button_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_button_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}} ()
+\item 
+void \mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}
+\item 
+float \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}} = .\+5f
+\item 
+bool \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}} = false
+\item 
+\mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_controller_ae3d1d9b7b165b02c97fe90330176d779}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_button_controller_a0925d59c54b2b7762aee924e64e84c82}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_orb}{Orb}} \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}
+\item 
+float \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}
+\item 
+Vector3 \mbox{\hyperlink{class_button_controller_a516193cee040de9deeab850397cbb71e}{touch\+Pos\+World}}
+\item 
+Vector2 \mbox{\hyperlink{class_button_controller_af3f1a22289a4ca3290036b6686e1d168}{touch\+Pos\+World2D}}
+\item 
+Raycast\+Hit2D \mbox{\hyperlink{class_button_controller_a3adf52c76e9494ee8b8d0361392d9b83}{hit\+Information}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00003}{3}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}\label{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}} 
+\index{ButtonController@{ButtonController}!Leave@{Leave}}
+\index{Leave@{Leave}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{Leave()}{Leave()}}
+{\footnotesize\ttfamily void Button\+Controller.\+Leave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ orb.speed\ =\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a09bb8ecbb255e97fb24ff69386877949}{GetCurrentSpeed}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ orb.longPress\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ >\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ -\/\ \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}}/2\ \&\&\ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ <\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ +\ \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}}\ /\ 2)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ controller.score\ +=\ 100;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ orb.success\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_controller_a22c12312bc6a2039139daaf195e8e468}\label{class_button_controller_a22c12312bc6a2039139daaf195e8e468}} 
+\index{ButtonController@{ButtonController}!Press@{Press}}
+\index{Press@{Press}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{Press()}{Press()}}
+{\footnotesize\ttfamily void Button\+Controller.\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}\ =\ \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}];}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}\ !=\ \textcolor{keyword}{null}\ \&\&\ !\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}})}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ orb.pressed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orb.speed\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orb.longPress\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_controller_a22c12312bc6a2039139daaf195e8e468_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_controller_ae3d1d9b7b165b02c97fe90330176d779}\label{class_button_controller_ae3d1d9b7b165b02c97fe90330176d779}} 
+\index{ButtonController@{ButtonController}!Start@{Start}}
+\index{Start@{Start}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Button\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}\ =\ GetComponent<SpriteRenderer>();}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_button_controller_a0925d59c54b2b7762aee924e64e84c82}\label{class_button_controller_a0925d59c54b2b7762aee924e64e84c82}} 
+\index{ButtonController@{ButtonController}!Update@{Update}}
+\index{Update@{Update}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Button\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}})}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Input.GetKeyDown(\mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}]))}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ sprite.color\ =\ \textcolor{keyword}{new}\ Color(.5f,\ .5f,\ .5f);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Input.GetKeyUp(\mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}]))}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ sprite.color\ =\ \textcolor{keyword}{new}\ Color(1f,\ 1f,\ 1f);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_controller_a0925d59c54b2b7762aee924e64e84c82_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}\label{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}} 
+\index{ButtonController@{ButtonController}!clicking@{clicking}}
+\index{clicking@{clicking}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{clicking}{clicking}}
+{\footnotesize\ttfamily bool Button\+Controller.\+clicking = false}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}\label{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}} 
+\index{ButtonController@{ButtonController}!controller@{controller}}
+\index{controller@{controller}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} Button\+Controller.\+controller}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_a3adf52c76e9494ee8b8d0361392d9b83}\label{class_button_controller_a3adf52c76e9494ee8b8d0361392d9b83}} 
+\index{ButtonController@{ButtonController}!hitInformation@{hitInformation}}
+\index{hitInformation@{hitInformation}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{hitInformation}{hitInformation}}
+{\footnotesize\ttfamily Raycast\+Hit2D Button\+Controller.\+hit\+Information\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}\label{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}} 
+\index{ButtonController@{ButtonController}!number@{number}}
+\index{number@{number}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily int Button\+Controller.\+number}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}\label{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}} 
+\index{ButtonController@{ButtonController}!orb@{orb}}
+\index{orb@{orb}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{orb}{orb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orb}{Orb}} Button\+Controller.\+orb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}\label{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}} 
+\index{ButtonController@{ButtonController}!sprite@{sprite}}
+\index{sprite@{sprite}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily Sprite\+Renderer Button\+Controller.\+sprite}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_aa36692e511702bf41c2db8096e6e703e}\label{class_button_controller_aa36692e511702bf41c2db8096e6e703e}} 
+\index{ButtonController@{ButtonController}!time@{time}}
+\index{time@{time}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Button\+Controller.\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}\label{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}} 
+\index{ButtonController@{ButtonController}!tolerance@{tolerance}}
+\index{tolerance@{tolerance}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{tolerance}{tolerance}}
+{\footnotesize\ttfamily float Button\+Controller.\+tolerance = .\+5f}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_a516193cee040de9deeab850397cbb71e}\label{class_button_controller_a516193cee040de9deeab850397cbb71e}} 
+\index{ButtonController@{ButtonController}!touchPosWorld@{touchPosWorld}}
+\index{touchPosWorld@{touchPosWorld}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{touchPosWorld}{touchPosWorld}}
+{\footnotesize\ttfamily Vector3 Button\+Controller.\+touch\+Pos\+World\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_button_controller_af3f1a22289a4ca3290036b6686e1d168}\label{class_button_controller_af3f1a22289a4ca3290036b6686e1d168}} 
+\index{ButtonController@{ButtonController}!touchPosWorld2D@{touchPosWorld2D}}
+\index{touchPosWorld2D@{touchPosWorld2D}!ButtonController@{ButtonController}}
+\doxysubsubsection{\texorpdfstring{touchPosWorld2D}{touchPosWorld2D}}
+{\footnotesize\ttfamily Vector2 Button\+Controller.\+touch\+Pos\+World2D\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_button_controller_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_button_controller_8cs_source}{Button\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_button_controller_8cs}{Button\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{_orb_8cs_source}{}\doxysection{Orb.\+cs}
+\mbox{\hyperlink{_orb_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00005}\mbox{\hyperlink{class_orb}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_orb}{Orb}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00007}\mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00008}\mbox{\hyperlink{class_orb_a4520026b1ff316c7851aca6390e87625}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_orb_a4520026b1ff316c7851aca6390e87625}{track}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00009}\mbox{\hyperlink{class_orb_a43e1c5a29aa6c0c24c1f44e03089365a}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_orb_a43e1c5a29aa6c0c24c1f44e03089365a}{number}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00010}\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00011}\mbox{\hyperlink{class_orb_aa22470b9203ea9f97fc58978e4efb202}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_aa22470b9203ea9f97fc58978e4efb202}{triggered}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00012}\mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_rythm_controller}{RythmController}}\ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00013}\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00014}\mbox{\hyperlink{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}{longPress}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00015}\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00016}\mbox{\hyperlink{class_orb_a2a489f03df83cd5c6f4941392d4550b7}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite[]\ \mbox{\hyperlink{class_orb_a2a489f03df83cd5c6f4941392d4550b7}{sprite}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00017}\mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite[]\ \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00018}\mbox{\hyperlink{class_orb_a59bc0983f48b1a6582da8cbb6cc2bcb4}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_orb_a59bc0983f48b1a6582da8cbb6cc2bcb4}{hitEffect}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00019}\mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{00019}}\ \ \ \ \ \mbox{\hyperlink{class_orb_line}{OrbLine}}\ \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00020}\mbox{\hyperlink{class_orb_acedd36c3a5fda0166eb64205970a3df8}{00020}}\ \ \ \ \ SpriteRenderer\ \mbox{\hyperlink{class_orb_acedd36c3a5fda0166eb64205970a3df8}{spriteRenderer}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00021}\mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{00021}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{curSpeed}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00023}\mbox{\hyperlink{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}{bait}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00024}\mbox{\hyperlink{class_orb_a50a793349aa0253be96ecf52cae829aa}{00024}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_a50a793349aa0253be96ecf52cae829aa}{time}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00025}\mbox{\hyperlink{class_orb_a2de672fdb30865f73f0d97ecaca164ff}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_orb_a2de672fdb30865f73f0d97ecaca164ff}{success}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00027}\mbox{\hyperlink{class_orb_a577b55cc26717cd523e23cc4bd373a57}{00027}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_a577b55cc26717cd523e23cc4bd373a57}{Awake}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_acedd36c3a5fda0166eb64205970a3df8}{spriteRenderer}}\ =\ GetComponentInChildren<SpriteRenderer>();}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00032}\mbox{\hyperlink{class_orb_a162d2319dd72ef1f51c06fa32d1bdf9e}{00032}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_a162d2319dd72ef1f51c06fa32d1bdf9e}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}\ =\ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orbType}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{curSpeed}}\ =\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a2a489f03df83cd5c6f4941392d4550b7}{sprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00039}\mbox{\hyperlink{class_orb_aab8f672dec11ddbd52e6ce96e965211e}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_aab8f672dec11ddbd52e6ce96e965211e}{SetTail}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}}\ =\ transform.Find(\textcolor{stringliteral}{"{}tail"{}}).gameObject.GetComponent<\mbox{\hyperlink{class_orb_line}{OrbLine}}>();}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ tail.length\ =\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ tail.speed\ =\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00046}\mbox{\hyperlink{class_orb_a09bb8ecbb255e97fb24ff69386877949}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_orb_a09bb8ecbb255e97fb24ff69386877949}{GetCurrentSpeed}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{curSpeed}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00051}\mbox{\hyperlink{class_orb_ab3077f6be09c465f66b44e30af3a4c81}{00051}}\ \ \ \ \ IEnumerator\ \mbox{\hyperlink{class_orb_ab3077f6be09c465f66b44e30af3a4c81}{ShortOrbFeedback}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}]\ ==\ \textcolor{keyword}{null})\ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(0.1f);}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ Destroy(gameObject);}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00059}\mbox{\hyperlink{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}{00059}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}{LongOrbFeedback}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}]\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}}.\mbox{\hyperlink{class_orb_line_aba4144936d587795cfe259a060183a74}{DecreaseTail}}();}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00067}\mbox{\hyperlink{class_orb_ae4e7adc9997a3300760430673e065e84}{00067}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_ae4e7adc9997a3300760430673e065e84}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ Vector3\ pos\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ pos.y\ -\/=\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}}\ *\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ transform.position\ =\ pos;}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}}\ \&\&\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ ==\ 0f)}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(\mbox{\hyperlink{class_orb_ab3077f6be09c465f66b44e30af3a4c81}{ShortOrbFeedback}}());}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}}\ \&\&\ \mbox{\hyperlink{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}{longPress}}\ \&\&\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}{LongOrbFeedback}}();}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00083}\mbox{\hyperlink{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf}{00083}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf}{OnTriggerEnter2D}}(Collider2D\ collision)}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}triggered\ kah\ min"{});}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}triggerer"{}})}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}{bait}})}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(time);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_aa22470b9203ea9f97fc58978e4efb202}{triggered}}\ =\ \mbox{\hyperlink{class_orb_a50a793349aa0253be96ecf52cae829aa}{time}};}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//controller.delay\ =\ time;}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Destroy(gameObject);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}{EnterTrigger}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00101}\mbox{\hyperlink{class_orb_a557e5d0767d57e63d56fe4f38633b0ab}{00101}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_orb_a557e5d0767d57e63d56fe4f38633b0ab}{OnTriggerExit2D}}(Collider2D\ collision)}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}triggerer"{}})}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(controller);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*if\ (bait)}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float\ between\ =\ triggered\ +\ ((time\ -\/\ triggered));}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ controller.delay\ =\ time;}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00110}00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(gameObject);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (bait)\ Destroy(gameObject);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//else}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}what\ about\ this"{});}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}{LeaveTrigger}}(\mbox{\hyperlink{class_orb_a4520026b1ff316c7851aca6390e87625}{track}});}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}end"{}})}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destroy(gameObject,\ 0.1f);}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_orb_8cs_source_l00122}00122\ \}}
+
+\end{DoxyCode}

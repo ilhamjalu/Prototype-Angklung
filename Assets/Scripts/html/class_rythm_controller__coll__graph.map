@@ -1,0 +1,9 @@
+<map id="RythmController" name="RythmController">
+<area shape="rect" id="node1" title=" " alt="" coords="236,329,377,847"/>
+<area shape="rect" id="node3" href="$class_button_controller.html" title=" " alt="" coords="161,1387,295,1611"/>
+<area shape="rect" id="node4" href="$class_orb.html" title=" " alt="" coords="365,909,512,1324"/>
+<area shape="rect" id="node2" title=" " alt="" coords="423,189,534,267"/>
+<area shape="rect" id="node5" href="$class_orb_line.html" title=" " alt="" coords="552,505,669,671"/>
+<area shape="rect" id="node6" href="$class_blocks.html" title=" " alt="" coords="9,189,71,267"/>
+<area shape="rect" id="node7" href="$class_block.html" title=" " alt="" coords="5,5,75,127"/>
+</map>

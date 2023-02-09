@@ -1,0 +1,353 @@
+\hypertarget{class_levels}{}\doxysection{Levels Class Reference}
+\label{class_levels}\index{Levels@{Levels}}
+
+
+Inheritance diagram for Levels\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_levels__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Levels\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_levels__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_levels_a3bc07050c6698998c1cc9a1784efbf12}{Pick}} (int number)
+\item 
+void \mbox{\hyperlink{class_levels_ac98e7523966cbb8bd502d8910034cac9}{Difficulty}} (int number)
+\item 
+void \mbox{\hyperlink{class_levels_adbf33d8dcb39f5d6914bffa1243fea50}{Play}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_levels_af4c3f8e341888348d6100c6e3a461fb8}{content\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_levels_abb3eb122ba86d32636e4b0ee4fa12b19}{difficulty\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_levels_a21695f9d4ecf8bfe399501c43bd76399}{level\+Component}}
+\item 
+Game\+Object \mbox{\hyperlink{class_levels_ad8f27aa17475ba2df67e3415cd795496}{difficulty\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_levels_a500e872164cdb231c8217727a22e1624}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_levels_a9ecb53367e415d0b4515b440c283ca94}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level}{Level}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_levels_a802ba91b9309d590679af28334e5720e}{buttons}} = new List$<$Game\+Object$>$()
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}{difficulty\+Buttons}} = new List$<$Game\+Object$>$()
+\item 
+int \mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}} = -\/1
+\item 
+int \mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_levels_ac98e7523966cbb8bd502d8910034cac9}\label{class_levels_ac98e7523966cbb8bd502d8910034cac9}} 
+\index{Levels@{Levels}!Difficulty@{Difficulty}}
+\index{Difficulty@{Difficulty}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{Difficulty()}{Difficulty()}}
+{\footnotesize\ttfamily void Levels.\+Difficulty (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00088}{88}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}}\ =\ number;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_levels_ac98e7523966cbb8bd502d8910034cac9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_levels_a3bc07050c6698998c1cc9a1784efbf12}\label{class_levels_a3bc07050c6698998c1cc9a1784efbf12}} 
+\index{Levels@{Levels}!Pick@{Pick}}
+\index{Pick@{Pick}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{Pick()}{Pick()}}
+{\footnotesize\ttfamily void Levels.\+Pick (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(GameObject\ diff\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}{difficultyButtons}})}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(diff);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}\ =\ number;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}}\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}{difficultyButtons}}.Clear();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(levels[number].name+\ "{}:\ "{}+\ levels[number].json.Length);}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}[number].\mbox{\hyperlink{class_level_a2e8e0eae393081a3def6bd9593c5ab2e}{difficulties}}.Length;\ i++)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(i);}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ component\ =\ Instantiate(\mbox{\hyperlink{class_levels_ad8f27aa17475ba2df67e3415cd795496}{difficultyComponent}},\ \mbox{\hyperlink{class_levels_abb3eb122ba86d32636e4b0ee4fa12b19}{difficultyPanel}}.transform);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}{difficultyButtons}}.Add(component.gameObject);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ RectTransform\ rect\ =\ component.GetComponent<RectTransform>();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_difficulty_button}{DifficultyButton}}\ difficultyButton=\ component.GetComponent<\mbox{\hyperlink{class_difficulty_button}{DifficultyButton}}>();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ difficultyButton.difficulty\ =\ i;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ TMP\_Text\ text\ =\ difficultyButton.\mbox{\hyperlink{class_difficulty_button_ae00222e5281288941f233a491036d48d}{text}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*switch(i) }}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \{ }}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 0: }}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ "{}Easy"{}; }}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ break; }}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 1: }}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ "{}Medium"{}; }}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ break; }}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 2: }}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ "{}Hard"{}; }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ break; }}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}[number].\mbox{\hyperlink{class_level_a2e8e0eae393081a3def6bd9593c5ab2e}{difficulties}}[i].\mbox{\hyperlink{class_difficulty_a820296976861a8dc7e6b97c94f07d66d}{name}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ pos\ =\ \textcolor{keyword}{new}\ Vector3(0f,\ (i\ *\ rect.rect.height)\ -\/\ rect.rect.height,\ 0f);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ component.transform.position\ =\ difficultyPanel.transform.position\ -\/\ pos;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//i++;}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Image\ image\ =\ buttons[number].GetComponent<Image>(); }}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ image.color\ =\ new\ Color(0,\ 0,\ 1); }}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager.instance.levelJSON\ =\ levels[number].json[0]; }}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager.instance.levelMusic\ =\ levels[number].music; }}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ SceneManager.LoadScene("{}Level1"{});*/}}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_levels_a3bc07050c6698998c1cc9a1784efbf12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_levels_adbf33d8dcb39f5d6914bffa1243fea50}\label{class_levels_adbf33d8dcb39f5d6914bffa1243fea50}} 
+\index{Levels@{Levels}!Play@{Play}}
+\index{Play@{Play}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Levels.\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00116}{116}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}!=-\/1)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//GameManager.instance.levelJSON\ =\ levels[picked].json[difficulty];}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ GameManager.instance.levelJSON\ =\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}[\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}].\mbox{\hyperlink{class_level_a2e8e0eae393081a3def6bd9593c5ab2e}{difficulties}}[\mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}}].\mbox{\hyperlink{class_difficulty_af75976647457eab8deb9a4178912530a}{json}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ GameManager.instance.levelMusic\ =\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}[\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}].\mbox{\hyperlink{class_level_a08297b5abe75c237558585f1859a86fa}{music}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ GameManager.instance.speed\ =\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}[\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}].\mbox{\hyperlink{class_level_a2e8e0eae393081a3def6bd9593c5ab2e}{difficulties}}[\mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}}].\mbox{\hyperlink{class_difficulty_a17d218018d869a323387b6c1faea8983}{speed}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ SceneManager.LoadScene(\textcolor{stringliteral}{"{}Level1"{}});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_levels_a500e872164cdb231c8217727a22e1624}\label{class_levels_a500e872164cdb231c8217727a22e1624}} 
+\index{Levels@{Levels}!Start@{Start}}
+\index{Start@{Start}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Levels.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}}\ =\ \mbox{\hyperlink{class_level_list}{LevelList}}.\mbox{\hyperlink{class_level_list_a24359fd0232f7d3e296e73883a29b43e}{levelList}}.\mbox{\hyperlink{class_level_list_a30cba84a11b7502091d2588bf0b3562d}{levels}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ GameManager.instance.levels\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_level}{Level}}\ level\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_levels_a93671c6997ed2c1c768f16a0968c4c51}{levels}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ component\ =\ Instantiate(\mbox{\hyperlink{class_levels_a21695f9d4ecf8bfe399501c43bd76399}{levelComponent}},\ \mbox{\hyperlink{class_levels_af4c3f8e341888348d6100c6e3a461fb8}{contentPanel}}.transform);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_levels_a802ba91b9309d590679af28334e5720e}{buttons}}.Add(component.gameObject);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ RectTransform\ rect\ =\ component.GetComponent<RectTransform>();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_button}{LevelButton}}\ levelButton\ =\ component.GetComponent<\mbox{\hyperlink{class_level_button}{LevelButton}}>();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ levelButton.number\ =\ i;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ TMP\_Text\ text\ =\ levelButton.\mbox{\hyperlink{class_level_button_a6042205b8f0ffc9d6eaa819967ac9b77}{text}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ level.\mbox{\hyperlink{class_level_a2433fd55fadeed7cbe2c8de639b54f64}{name}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ pos\ =\ \textcolor{keyword}{new}\ Vector3(0f,\ (rect.rect.height\ /\ 2)\ +\ (i\ *\ rect.rect.height),\ 0f);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ component.transform.position\ =\ contentPanel.transform.position\ -\/\ pos;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_levels_a9ecb53367e415d0b4515b440c283ca94}\label{class_levels_a9ecb53367e415d0b4515b440c283ca94}} 
+\index{Levels@{Levels}!Update@{Update}}
+\index{Update@{Update}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Levels.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00092}{92}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(GameObject\ button\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_levels_a802ba91b9309d590679af28334e5720e}{buttons}})}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ Image\ image\ =\ button.GetComponent<Image>();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}\ ==\ i)\ image.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 1);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ image.color\ =\ \textcolor{keyword}{new}\ Color(1,\ 1,\ 1);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ a\ =\ 0;\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_levels_acb95a638546dac2f74a68b9633c5da81}{picked}}!=-\/1)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(GameObject\ difficultyButton\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}{difficultyButtons}})}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ image\ =\ difficultyButton.GetComponent<Image>();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}{difficulty}}\ ==\ a)\ image.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 1f);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ image.color\ =\ \textcolor{keyword}{new}\ Color(1,\ 1,\ 1);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a++;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_levels_a802ba91b9309d590679af28334e5720e}\label{class_levels_a802ba91b9309d590679af28334e5720e}} 
+\index{Levels@{Levels}!buttons@{buttons}}
+\index{buttons@{buttons}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily List$<$Game\+Object$>$ Levels.\+buttons = new List$<$Game\+Object$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_af4c3f8e341888348d6100c6e3a461fb8}\label{class_levels_af4c3f8e341888348d6100c6e3a461fb8}} 
+\index{Levels@{Levels}!contentPanel@{contentPanel}}
+\index{contentPanel@{contentPanel}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{contentPanel}{contentPanel}}
+{\footnotesize\ttfamily Game\+Object Levels.\+content\+Panel}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}\label{class_levels_a26c0c1fc7181b65f4e35cedfda2837e4}} 
+\index{Levels@{Levels}!difficulty@{difficulty}}
+\index{difficulty@{difficulty}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{difficulty}{difficulty}}
+{\footnotesize\ttfamily int Levels.\+difficulty = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}\label{class_levels_aaad1cc0cf94bdcb1728de3c8df68c645}} 
+\index{Levels@{Levels}!difficultyButtons@{difficultyButtons}}
+\index{difficultyButtons@{difficultyButtons}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{difficultyButtons}{difficultyButtons}}
+{\footnotesize\ttfamily List$<$Game\+Object$>$ Levels.\+difficulty\+Buttons = new List$<$Game\+Object$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_ad8f27aa17475ba2df67e3415cd795496}\label{class_levels_ad8f27aa17475ba2df67e3415cd795496}} 
+\index{Levels@{Levels}!difficultyComponent@{difficultyComponent}}
+\index{difficultyComponent@{difficultyComponent}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{difficultyComponent}{difficultyComponent}}
+{\footnotesize\ttfamily Game\+Object Levels.\+difficulty\+Component}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_abb3eb122ba86d32636e4b0ee4fa12b19}\label{class_levels_abb3eb122ba86d32636e4b0ee4fa12b19}} 
+\index{Levels@{Levels}!difficultyPanel@{difficultyPanel}}
+\index{difficultyPanel@{difficultyPanel}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{difficultyPanel}{difficultyPanel}}
+{\footnotesize\ttfamily Game\+Object Levels.\+difficulty\+Panel}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_a21695f9d4ecf8bfe399501c43bd76399}\label{class_levels_a21695f9d4ecf8bfe399501c43bd76399}} 
+\index{Levels@{Levels}!levelComponent@{levelComponent}}
+\index{levelComponent@{levelComponent}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{levelComponent}{levelComponent}}
+{\footnotesize\ttfamily Game\+Object Levels.\+level\+Component}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_a93671c6997ed2c1c768f16a0968c4c51}\label{class_levels_a93671c6997ed2c1c768f16a0968c4c51}} 
+\index{Levels@{Levels}!levels@{levels}}
+\index{levels@{levels}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{levels}{levels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_level}{Level}} \mbox{[}$\,$\mbox{]} Levels.\+levels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+\mbox{\Hypertarget{class_levels_acb95a638546dac2f74a68b9633c5da81}\label{class_levels_acb95a638546dac2f74a68b9633c5da81}} 
+\index{Levels@{Levels}!picked@{picked}}
+\index{picked@{picked}!Levels@{Levels}}
+\doxysubsubsection{\texorpdfstring{picked}{picked}}
+{\footnotesize\ttfamily int Levels.\+picked = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_levels_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_levels_8cs_source}{Levels.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_levels_8cs}{Levels.\+cs}}\end{DoxyCompactItemize}

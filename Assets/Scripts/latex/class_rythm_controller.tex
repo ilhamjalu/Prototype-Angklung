@@ -1,0 +1,845 @@
+\hypertarget{class_rythm_controller}{}\doxysection{Rythm\+Controller Class Reference}
+\label{class_rythm_controller}\index{RythmController@{RythmController}}
+
+
+Inheritance diagram for Rythm\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_rythm_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rythm\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_rythm_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}{Start\+Level}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}{Enter\+Trigger}} (\mbox{\hyperlink{class_orb}{Orb}} \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}})
+\item 
+void \mbox{\hyperlink{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}{Leave\+Trigger}} (int track)
+\item 
+void \mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_affd1106b18976c56527875f9b13a7145}{Pause\+Or\+Play}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_a656ae1f8795537aab6118a6c751d3f65}{Home}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}}
+\item 
+\mbox{\hyperlink{class_button_controller}{Button\+Controller}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}
+\item 
+float \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{block\+Speed}} = 200f
+\item 
+\mbox{\hyperlink{class_blocks}{Blocks}} \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}} = new \mbox{\hyperlink{class_blocks}{Blocks}}()
+\item 
+Key\+Code\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}} = \{ Key\+Code.\+A, Key\+Code.\+S, Key\+Code.\+D, Key\+Code.\+J, Key\+Code.\+K \}
+\item 
+float \mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}} = 0.\+7f
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_rythm_controller_a6ee5350ca8b5f94f9a7d243e2844cda6}{score\+Text}}
+\item 
+Image \mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}}
+\item 
+Game\+Object \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{home\+Button}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}}
+\item 
+Sprite \mbox{\hyperlink{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}{star\+Inactive}}
+\item 
+int \mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orb\+Type}}
+\item 
+int \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}
+\item 
+bool \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}} = false
+\item 
+\mbox{\hyperlink{class_orb}{Orb}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}
+\item 
+int \mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}} = 0
+\item 
+int \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{max\+Score}} = 0
+\item 
+int \mbox{\hyperlink{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}{score\+Increment}} = 100
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rythm_controller_af6276464bf75cb0f4c7f1b58641cb7eb}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_adc27a15dff601c4bb7ec25138043e0d3}{Return\+Volume}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{Destroy\+Pressable}} (int track)
+\item 
+void \mbox{\hyperlink{class_rythm_controller_a440cd1078565fef00e92d40ac0dbd836}{Overlay}} ()
+\item 
+void \mbox{\hyperlink{class_rythm_controller_adb34454137f182246692c03c2f92036e}{End\+Level}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audio\+Source}}
+\item 
+float \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}}
+\item 
+int \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}} = 0
+\item 
+int \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}
+\item 
+float \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{level\+Length}}
+\item 
+bool \mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}} = false
+\item 
+Vector3 \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touch\+Pos\+World}}
+\item 
+Vector2 \mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touch\+Pos\+World2D}}
+\item 
+Raycast\+Hit2D \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hit\+Information}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}\label{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}} 
+\index{RythmController@{RythmController}!DestroyPressable@{DestroyPressable}}
+\index{DestroyPressable@{DestroyPressable}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{DestroyPressable()}{DestroyPressable()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Destroy\+Pressable (\begin{DoxyParamCaption}\item[{int}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00203}{203}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204\ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track],\ 1f);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//pressable[track]\ =\ null;}}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_adb34454137f182246692c03c2f92036e}\label{class_rythm_controller_adb34454137f182246692c03c2f92036e}} 
+\index{RythmController@{RythmController}!EndLevel@{EndLevel}}
+\index{EndLevel@{EndLevel}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{EndLevel()}{EndLevel()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+End\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00232}{232}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233\ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{comment}{//int\ section\ =\ maxScore\ /\ 3;}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.9)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 3;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.7)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 2;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}\ >\ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ *\ 0.4)\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ =\ 1;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}}[i].SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ Image\ starSprite\ =\ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}}[i].GetComponent<Image>();}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ <=\ i)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ starSprite.sprite\ =\ \mbox{\hyperlink{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}{starInactive}};}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_affd1106b18976c56527875f9b13a7145}{PauseOrPlay}}();}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_adb34454137f182246692c03c2f92036e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_adb34454137f182246692c03c2f92036e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}\label{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}} 
+\index{RythmController@{RythmController}!EnterTrigger@{EnterTrigger}}
+\index{EnterTrigger@{EnterTrigger}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{EnterTrigger()}{EnterTrigger()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Enter\+Trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_orb}{Orb}}}]{orb }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00171}{171}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[\mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}}.track]\ =\ \mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ orb.triggered\ =\ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}};}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_a656ae1f8795537aab6118a6c751d3f65}\label{class_rythm_controller_a656ae1f8795537aab6118a6c751d3f65}} 
+\index{RythmController@{RythmController}!Home@{Home}}
+\index{Home@{Home}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{Home()}{Home()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00248}{248}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00249\ \ \ \ \ \{}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ SceneManager.LoadScene(\textcolor{stringliteral}{"{}MainMenu"{}});}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}\label{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}} 
+\index{RythmController@{RythmController}!LeaveTrigger@{LeaveTrigger}}
+\index{LeaveTrigger@{LeaveTrigger}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{LeaveTrigger()}{LeaveTrigger()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Leave\+Trigger (\begin{DoxyParamCaption}\item[{int}]{track }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00177}{177}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ <=\ 0f)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].success);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[track].success\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}}();}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(pressable[track]);}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{DestroyPressable}}(track);}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}\label{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}} 
+\index{RythmController@{RythmController}!Miss@{Miss}}
+\index{Miss@{Miss}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{Miss()}{Miss()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Miss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00192}{192}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ audioSource.volume\ =\ 0.5f;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}ReturnVolume"{}},\ 0.5f);}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_a440cd1078565fef00e92d40ac0dbd836}\label{class_rythm_controller_a440cd1078565fef00e92d40ac0dbd836}} 
+\index{RythmController@{RythmController}!Overlay@{Overlay}}
+\index{Overlay@{Overlay}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{Overlay()}{Overlay()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Overlay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00209}{209}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rythm_controller_affd1106b18976c56527875f9b13a7145}\label{class_rythm_controller_affd1106b18976c56527875f9b13a7145}} 
+\index{RythmController@{RythmController}!PauseOrPlay@{PauseOrPlay}}
+\index{PauseOrPlay@{PauseOrPlay}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{PauseOrPlay()}{PauseOrPlay()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Pause\+Or\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00215}{215}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}})}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.Pause();}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 0;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}{ended}})}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.UnPause();}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 1;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_affd1106b18976c56527875f9b13a7145_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_adc27a15dff601c4bb7ec25138043e0d3}\label{class_rythm_controller_adc27a15dff601c4bb7ec25138043e0d3}} 
+\index{RythmController@{RythmController}!ReturnVolume@{ReturnVolume}}
+\index{ReturnVolume@{ReturnVolume}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{ReturnVolume()}{ReturnVolume()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Return\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ audioSource.volume\ =\ 1;}
+\DoxyCodeLine{00201\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rythm_controller_af6276464bf75cb0f4c7f1b58641cb7eb}\label{class_rythm_controller_af6276464bf75cb0f4c7f1b58641cb7eb}} 
+\index{RythmController@{RythmController}!Start@{Start}}
+\index{Start@{Start}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orbType}}\ =\ PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}orbType"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}\ =\ GetComponent<AudioSource>();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(GameObject\ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}{stars}})}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}{star}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}{homeButton}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_button_controller}{ButtonController}}\ button\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}})}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ button.controller\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//float\ distance\ =\ spawner[0].transform.position.y\ -\/\ buttons[0].transform.position.y;}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(distance);}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//baiting}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameObject\ newOrb\ =\ Instantiate(orb); }}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ Orb\ orbCompponent\ =\ newOrb.GetComponent<Orb>(); }}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.track\ =\ 0; }}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.speed\ =\ blockSpeed; }}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.number\ =\ number; }}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.length\ =\ blocks.block[number].length; }}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.controller\ =\ this; }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ //orbCompponent.SetTail(); }}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ orbCompponent.bait\ =\ true; }}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ newOrb.transform.position\ =\ spawner[0].transform.position; }}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ newOrb.transform.position\ +=\ new\ Vector3(0f,\ 0f,\ 100000f);*/}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}\label{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}} 
+\index{RythmController@{RythmController}!StartLevel@{StartLevel}}
+\index{StartLevel@{StartLevel}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{StartLevel()}{StartLevel()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Start\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00079}{79}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}.Length;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a753a36577d182170972f4649bb2d6817}{maxScore}}\ =\ blocks.block.Length\ *\ \mbox{\hyperlink{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}{scoreIncrement}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ =\ \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}}[0].transform.position.y\ -\/\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[0].transform.position.y;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}}\ =\ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ /\ \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e}\label{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e}} 
+\index{RythmController@{RythmController}!Update@{Update}}
+\index{Update@{Update}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Rythm\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00089}{89}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ scoreText.text\ =\ \mbox{\hyperlink{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}{score}}+\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}{start}})}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ overlay.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 0,\ Mathf.Lerp(\mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}}.color.a,\ 0f,\ 0.1f));}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}\ <\ \mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}})}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ starting\ =\ \mbox{\hyperlink{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}{levelLength}}\ /\ (\mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}}\ /\ Time.deltaTime);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}}\ >=\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_a43c55140bcd20929e35d1b2a631f4cd2}{start}}-\/\mbox{\hyperlink{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}{delay}})}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ track\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_a5ddac282eb5a8367e53c6641066d6c7e}{track}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ newOrb\ =\ Instantiate(\mbox{\hyperlink{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}{orb}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb}{Orb}}\ orbCompponent\ =\ newOrb.GetComponent<\mbox{\hyperlink{class_orb}{Orb}}>();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.track\ =\ track;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.speed\ =\ \mbox{\hyperlink{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}{blockSpeed}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.number\ =\ \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.length\ =\ \mbox{\hyperlink{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}{blocks}}.\mbox{\hyperlink{class_blocks_a775821871db7dd4edb7c72edf671aa34}{block}}[\mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}].\mbox{\hyperlink{class_block_ad2f6e1c6aca6b7f743f7ab632e6535ee}{length}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.controller\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orbCompponent.\mbox{\hyperlink{class_orb_aab8f672dec11ddbd52e6ce96e965211e}{SetTail}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newOrb.transform.position\ =\ \mbox{\hyperlink{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}{spawner}}[track].transform.position;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//maxScore\ +=\ (orbCompponent.length\ >\ 0)\ ?\ ((int)(scoreIncrement\ *\ 2\ *\ orbCompponent.length))\ :\ 100;}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}{number}}++;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(starting);}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}{audioSource}}.isPlaying)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_adb34454137f182246692c03c2f92036e}{EndLevel}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}.Length;\ i++)}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i]\ \&\&\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ >\ 0f\ \&\&\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].triggered\ +\ \mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[i].\mbox{\hyperlink{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}{length}}\ <\ \mbox{\hyperlink{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}{time}})}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ad83715b62900aae7e252326b4fa3f026}{DestroyPressable}}(i);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Input.touchCount;\ i++)}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}\ =\ Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touchPosWorld2D}}\ =\ \textcolor{keyword}{new}\ Vector2(\mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}.x,\ \mbox{\hyperlink{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}{touchPosWorld}}.y);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}\ =\ Physics2D.Raycast(\mbox{\hyperlink{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}{touchPosWorld2D}},\ Camera.main.transform.forward);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.collider);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.collider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//We\ should\ have\ hit\ something\ with\ a\ 2D\ Physics\ collider!}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ touchedObject\ =\ \mbox{\hyperlink{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}{hitInformation}}.transform.gameObject;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ =\ 0;\ x\ <\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}.Length;\ x++)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (touchedObject\ ==\ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].gameObject)}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (Input.GetTouch(i).phase)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TouchPhase.Began:}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}.color\ =\ \textcolor{keyword}{new}\ Color(.5f,\ .5f,\ .5f);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TouchPhase.Ended:}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}.color\ =\ \textcolor{keyword}{new}\ Color(1f,\ 1f,\ 1f);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}{buttons}}[x].\mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//touchedObject\ should\ be\ the\ object\ someone\ touched.}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}Touched\ "{}\ +\ touchedObject.transform.name);}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ overlay.color\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 0,\ Mathf.Lerp(\mbox{\hyperlink{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}{overlay}}.color.a,\ 0.8f,\ 0.1f));}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00169\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rythm_controller_a8ce8f2a3c5cc69182e34d2511616082e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}\label{class_rythm_controller_ad2ae41058ada8a14e720e71f6a43dbdb}} 
+\index{RythmController@{RythmController}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily Audio\+Source Rythm\+Controller.\+audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}\label{class_rythm_controller_a9ec4d89ba4bf89554327098f471d6887}} 
+\index{RythmController@{RythmController}!blocks@{blocks}}
+\index{blocks@{blocks}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{blocks}{blocks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_blocks}{Blocks}} Rythm\+Controller.\+blocks = new \mbox{\hyperlink{class_blocks}{Blocks}}()}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}\label{class_rythm_controller_aaa3249a80c2880cbac7d13d73ee2d088}} 
+\index{RythmController@{RythmController}!blockSpeed@{blockSpeed}}
+\index{blockSpeed@{blockSpeed}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{blockSpeed}{blockSpeed}}
+{\footnotesize\ttfamily float Rythm\+Controller.\+block\+Speed = 200f}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}\label{class_rythm_controller_ab968de472c4fa77408cfc2264eccb6b8}} 
+\index{RythmController@{RythmController}!buttons@{buttons}}
+\index{buttons@{buttons}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button_controller}{Button\+Controller}} \mbox{[}$\,$\mbox{]} Rythm\+Controller.\+buttons}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}\label{class_rythm_controller_ad5cacfb442ed874e3b937553d8356cf4}} 
+\index{RythmController@{RythmController}!delay@{delay}}
+\index{delay@{delay}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily float Rythm\+Controller.\+delay = 0.\+7f}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}\label{class_rythm_controller_ab5da820b2ec596fc018ef8c98a4d6535}} 
+\index{RythmController@{RythmController}!ended@{ended}}
+\index{ended@{ended}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{ended}{ended}}
+{\footnotesize\ttfamily bool Rythm\+Controller.\+ended = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}\label{class_rythm_controller_ab5a511d906320631dd75bf02375c71cc}} 
+\index{RythmController@{RythmController}!hitInformation@{hitInformation}}
+\index{hitInformation@{hitInformation}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{hitInformation}{hitInformation}}
+{\footnotesize\ttfamily Raycast\+Hit2D Rythm\+Controller.\+hit\+Information\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}\label{class_rythm_controller_a21d6788143eea8b29d3338764bb9a31b}} 
+\index{RythmController@{RythmController}!homeButton@{homeButton}}
+\index{homeButton@{homeButton}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{homeButton}{homeButton}}
+{\footnotesize\ttfamily Game\+Object Rythm\+Controller.\+home\+Button}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}\label{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}} 
+\index{RythmController@{RythmController}!keys@{keys}}
+\index{keys@{keys}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily Key\+Code \mbox{[}$\,$\mbox{]} Rythm\+Controller.\+keys = \{ Key\+Code.\+A, Key\+Code.\+S, Key\+Code.\+D, Key\+Code.\+J, Key\+Code.\+K \}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}\label{class_rythm_controller_a44c61720ec8579e8e71d3d41860fc939}} 
+\index{RythmController@{RythmController}!length@{length}}
+\index{length@{length}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}\label{class_rythm_controller_a52ff08c8f0791bbb95004cfd81a582a5}} 
+\index{RythmController@{RythmController}!levelLength@{levelLength}}
+\index{levelLength@{levelLength}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{levelLength}{levelLength}}
+{\footnotesize\ttfamily float Rythm\+Controller.\+level\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a753a36577d182170972f4649bb2d6817}\label{class_rythm_controller_a753a36577d182170972f4649bb2d6817}} 
+\index{RythmController@{RythmController}!maxScore@{maxScore}}
+\index{maxScore@{maxScore}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{maxScore}{maxScore}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+max\+Score = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}\label{class_rythm_controller_a3fab02046357fabe5d5bfc9c812b9787}} 
+\index{RythmController@{RythmController}!number@{number}}
+\index{number@{number}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+number = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}\label{class_rythm_controller_ae94aac2a80c4e5bb30fa5dd64f7d88ca}} 
+\index{RythmController@{RythmController}!orb@{orb}}
+\index{orb@{orb}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{orb}{orb}}
+{\footnotesize\ttfamily Game\+Object Rythm\+Controller.\+orb}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}\label{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}} 
+\index{RythmController@{RythmController}!orbType@{orbType}}
+\index{orbType@{orbType}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{orbType}{orbType}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+orb\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}\label{class_rythm_controller_aef2656893eb471fadc27962bff76c2c7}} 
+\index{RythmController@{RythmController}!overlay@{overlay}}
+\index{overlay@{overlay}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{overlay}{overlay}}
+{\footnotesize\ttfamily Image Rythm\+Controller.\+overlay}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}\label{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}} 
+\index{RythmController@{RythmController}!pressable@{pressable}}
+\index{pressable@{pressable}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{pressable}{pressable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orb}{Orb}} \mbox{[}$\,$\mbox{]} Rythm\+Controller.\+pressable}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}\label{class_rythm_controller_afed5445dab6cb1b843039108f9375ca4}} 
+\index{RythmController@{RythmController}!score@{score}}
+\index{score@{score}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+score = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}\label{class_rythm_controller_ac2cc7f23d360eaef1e1b69f22548a3ab}} 
+\index{RythmController@{RythmController}!scoreIncrement@{scoreIncrement}}
+\index{scoreIncrement@{scoreIncrement}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{scoreIncrement}{scoreIncrement}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+score\+Increment = 100}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a6ee5350ca8b5f94f9a7d243e2844cda6}\label{class_rythm_controller_a6ee5350ca8b5f94f9a7d243e2844cda6}} 
+\index{RythmController@{RythmController}!scoreText@{scoreText}}
+\index{scoreText@{scoreText}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{scoreText}{scoreText}}
+{\footnotesize\ttfamily TMP\+\_\+\+Text Rythm\+Controller.\+score\+Text}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}\label{class_rythm_controller_a9f48ef7adf8b3343a494c44f2e057b52}} 
+\index{RythmController@{RythmController}!spawner@{spawner}}
+\index{spawner@{spawner}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{spawner}{spawner}}
+{\footnotesize\ttfamily Game\+Object \mbox{[}$\,$\mbox{]} Rythm\+Controller.\+spawner}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}\label{class_rythm_controller_ad744fc987f785db940bb0e4adbbcfa09}} 
+\index{RythmController@{RythmController}!star@{star}}
+\index{star@{star}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{star}{star}}
+{\footnotesize\ttfamily int Rythm\+Controller.\+star}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}\label{class_rythm_controller_a41de199ede02e685aeb34061171c75f5}} 
+\index{RythmController@{RythmController}!starInactive@{starInactive}}
+\index{starInactive@{starInactive}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{starInactive}{starInactive}}
+{\footnotesize\ttfamily Sprite Rythm\+Controller.\+star\+Inactive}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}\label{class_rythm_controller_a55d10e88a7f1df57a31f7d0de0ffcda9}} 
+\index{RythmController@{RythmController}!stars@{stars}}
+\index{stars@{stars}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{stars}{stars}}
+{\footnotesize\ttfamily Game\+Object \mbox{[}$\,$\mbox{]} Rythm\+Controller.\+stars}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}\label{class_rythm_controller_ab77aa91d330145d2745bacd75f442752}} 
+\index{RythmController@{RythmController}!start@{start}}
+\index{start@{start}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool Rythm\+Controller.\+start = false}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}\label{class_rythm_controller_a90ae92852aaa3d1eb4df2cb7772e0f36}} 
+\index{RythmController@{RythmController}!time@{time}}
+\index{time@{time}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Rythm\+Controller.\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}\label{class_rythm_controller_aa77247e08ffe63bc5e82b8558c195045}} 
+\index{RythmController@{RythmController}!touchPosWorld@{touchPosWorld}}
+\index{touchPosWorld@{touchPosWorld}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{touchPosWorld}{touchPosWorld}}
+{\footnotesize\ttfamily Vector3 Rythm\+Controller.\+touch\+Pos\+World\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}\label{class_rythm_controller_a4ea09a72e5fedd96ecb9a6f8523581ee}} 
+\index{RythmController@{RythmController}!touchPosWorld2D@{touchPosWorld2D}}
+\index{touchPosWorld2D@{touchPosWorld2D}!RythmController@{RythmController}}
+\doxysubsubsection{\texorpdfstring{touchPosWorld2D}{touchPosWorld2D}}
+{\footnotesize\ttfamily Vector2 Rythm\+Controller.\+touch\+Pos\+World2D\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_rythm_controller_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_rythm_controller_8cs_source}{Rythm\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rythm_controller_8cs}{Rythm\+Controller.\+cs}}\end{DoxyCompactItemize}

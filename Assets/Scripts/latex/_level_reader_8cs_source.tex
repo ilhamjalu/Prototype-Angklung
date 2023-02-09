@@ -1,0 +1,28 @@
+\hypertarget{_level_reader_8cs_source}{}\doxysection{Level\+Reader.\+cs}
+\mbox{\hyperlink{_level_reader_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00005}\mbox{\hyperlink{class_level_reader}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_reader}{LevelReader}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00007}\mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{00007}}\ \ \ \ \ TextAsset\ \mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{textJson}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00008}\mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{00008}}\ \ \ \ \ \mbox{\hyperlink{class_rythm_controller}{RythmController}}\ \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythmController}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00009}\mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{00009}}\ \ \ \ \ AudioSource\ \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audioSource}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00011}\mbox{\hyperlink{class_level_reader_ab8457d0d46f1495a0b537087774ed82e}{00011}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_reader_ab8457d0d46f1495a0b537087774ed82e}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{textJson}}\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_ab5a615fb40dc37eb6e9da7d38a3dcc20}{levelJSON}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythmController}}\ =\ GetComponent<RythmController>();}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audioSource}}\ =\ GetComponent<AudioSource>();}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ rythmController.blocks\ =\ JsonUtility.FromJson<\mbox{\hyperlink{class_blocks}{Blocks}}>(\mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{textJson}}.text);}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ rythmController.blockSpeed\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_a7a3732d88888e672f51ba07d10dc1c2b}{speed}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ audioSource.clip\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_a6b495211e75a6a2c33356705e796aa4f}{levelMusic}};}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}halo"{});}}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audioSource}}.Play();}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythmController}}.\mbox{\hyperlink{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}{StartLevel}}();}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_reader_8cs_source_l00023}00023\ \}}
+
+\end{DoxyCode}

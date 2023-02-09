@@ -1,0 +1,99 @@
+\hypertarget{_level_editor_8cs_source}{}\doxysection{Level\+Editor.\+cs}
+\mbox{\hyperlink{_level_editor_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.IO;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00007}\mbox{\hyperlink{class_level_editor}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_editor}{LevelEditor}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00009}\mbox{\hyperlink{class_level_editor_a380ac75391d6d6c8419d0e4578556f25}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \mbox{\hyperlink{class_level_editor_a380ac75391d6d6c8419d0e4578556f25}{text}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00010}\mbox{\hyperlink{class_level_editor_a1b5519a385b37d7e19116c988c56183a}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_level_editor_a1b5519a385b37d7e19116c988c56183a}{fileName}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00011}\mbox{\hyperlink{class_level_editor_abd31f1e1c58dd5267f63d0d2737d1510}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_level_editor_abd31f1e1c58dd5267f63d0d2737d1510}{delay}}\ =\ 0.2f;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00012}\mbox{\hyperlink{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ AudioSource\ \mbox{\hyperlink{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}{music}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00014}\mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{00014}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00015}\mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{00015}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00017}\mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{00017}}\ \ \ \ \ \textcolor{keywordtype}{bool}[]\ \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{bool}[5];}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00018}\mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{00018}}\ \ \ \ \ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[5];}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00019}\mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{00019}}\ \ \ \ \ KeyCode[]\ \mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}\ =\ \{KeyCode.A,\ KeyCode.S,\ KeyCode.D,\ KeyCode.J,\ KeyCode.K\};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00021}\mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{00021}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//Blocks\ blocks\ =\ new\ Blocks();}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00024}\mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{00024}}\ \ \ \ \ List<Block>\ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00026}\mbox{\hyperlink{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_editor_a8e39485f6bd3145c1f5ac4ce50944a01}{StartOrStopRecording}}()}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}})}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_blocks}{Blocks}}\ blocks\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_blocks}{Blocks}}();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ blocks.block\ =\ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}.ToArray();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}}\ =\ JsonUtility.ToJson(blocks);}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(result);}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}{SaveJson}}();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a41c74275e5dbf9876e461a5fbd438d5f}{music}}.Play();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00044}\mbox{\hyperlink{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}{00044}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_editor_ae9bfcf98f74ef7bbb2123abe9ae922e6}{SaveJson}}()}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ path\ =\ Application.persistentDataPath\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ \mbox{\hyperlink{class_level_editor_a1b5519a385b37d7e19116c988c56183a}{fileName}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ StreamWriter\ writer\ =\ \textcolor{keyword}{new}\ StreamWriter(path,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ writer.WriteLine(\mbox{\hyperlink{class_level_editor_acddaf05315c5d9dda9c7f65e38540cd3}{result}});}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ writer.Close();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Start\ is\ called\ before\ the\ first\ frame\ update}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00053}\mbox{\hyperlink{class_level_editor_a75d4bf0d2cfc801dcc66b356c19b3bde}{00053}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_editor_a75d4bf0d2cfc801dcc66b356c19b3bde}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}\ =\ \textcolor{keyword}{new}\ List<Block>();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ Debug.Log(Application.persistentDataPath);}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Update\ is\ called\ once\ per\ frame}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00060}\mbox{\hyperlink{class_level_editor_a2267d392ae448ff4c82cf15d0d16a256}{00060}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_editor_a2267d392ae448ff4c82cf15d0d16a256}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_a748d12242c36a05a87544b43fb11cbac}{start}})}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ text.text\ =\ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i])}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetKeyDown(\mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}[i]))}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetKeyUp(\mbox{\hyperlink{class_level_editor_a79fb5cdbcbe10c9b9cd09f930e4358b8}{keys}}[i]))}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_acd33bf89076f117689ead10f6682b0f6}{pressing}}[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Pressing\ "{}}\ +\ i\ +\ \textcolor{stringliteral}{"{}\ from\ "{}}\ +\ (\mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ -\/\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i])\ +\ \textcolor{stringliteral}{"{}\ for\ "{}}\ +\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ +\ \textcolor{stringliteral}{"{}s"{}});}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block}{Block}}\ newBlock\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_block}{Block}}();}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.track\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.start\ =\ \mbox{\hyperlink{class_level_editor_ae4ff9e9bf265e92c1ae6d517a59b11a3}{time}}\ -\/\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i];}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlock.length\ =\ (\mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i]\ <\ 0.2f)\ ?\ 0f\ :\ \mbox{\hyperlink{class_level_editor_afcc074a0c4482b5cc43921546d9843b8}{hold}}[i];}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_editor_a087026bbe3d23ea49a3f59dbfb53540e}{block}}.Add(newBlock);}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(block);}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_level_editor_8cs_source_l00094}00094\ \}}
+
+\end{DoxyCode}

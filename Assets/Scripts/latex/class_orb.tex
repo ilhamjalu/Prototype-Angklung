@@ -1,0 +1,554 @@
+\hypertarget{class_orb}{}\doxysection{Orb Class Reference}
+\label{class_orb}\index{Orb@{Orb}}
+
+
+Inheritance diagram for Orb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_orb__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Orb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_orb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_orb_aab8f672dec11ddbd52e6ce96e965211e}{Set\+Tail}} ()
+\item 
+float \mbox{\hyperlink{class_orb_a09bb8ecbb255e97fb24ff69386877949}{Get\+Current\+Speed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}}
+\item 
+int \mbox{\hyperlink{class_orb_a4520026b1ff316c7851aca6390e87625}{track}}
+\item 
+int \mbox{\hyperlink{class_orb_a43e1c5a29aa6c0c24c1f44e03089365a}{number}}
+\item 
+float \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}
+\item 
+float \mbox{\hyperlink{class_orb_aa22470b9203ea9f97fc58978e4efb202}{triggered}}
+\item 
+\mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}
+\item 
+bool \mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}} = false
+\item 
+bool \mbox{\hyperlink{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}{long\+Press}} = false
+\item 
+int \mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{sprite\+Index}} = 0
+\item 
+Sprite\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_orb_a2a489f03df83cd5c6f4941392d4550b7}{sprite}}
+\item 
+Sprite\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orb\+Feedback\+Sprite}}
+\item 
+Game\+Object \mbox{\hyperlink{class_orb_a59bc0983f48b1a6582da8cbb6cc2bcb4}{hit\+Effect}}
+\item 
+bool \mbox{\hyperlink{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}{bait}} = false
+\item 
+bool \mbox{\hyperlink{class_orb_a2de672fdb30865f73f0d97ecaca164ff}{success}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_orb_a577b55cc26717cd523e23cc4bd373a57}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_orb_a162d2319dd72ef1f51c06fa32d1bdf9e}{Start}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_orb_ab3077f6be09c465f66b44e30af3a4c81}{Short\+Orb\+Feedback}} ()
+\item 
+void \mbox{\hyperlink{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}{Long\+Orb\+Feedback}} ()
+\item 
+void \mbox{\hyperlink{class_orb_ae4e7adc9997a3300760430673e065e84}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_orb_a557e5d0767d57e63d56fe4f38633b0ab}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_orb_line}{Orb\+Line}} \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_orb_acedd36c3a5fda0166eb64205970a3df8}{sprite\+Renderer}}
+\item 
+float \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{cur\+Speed}}
+\item 
+float \mbox{\hyperlink{class_orb_a50a793349aa0253be96ecf52cae829aa}{time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_orb_a577b55cc26717cd523e23cc4bd373a57}\label{class_orb_a577b55cc26717cd523e23cc4bd373a57}} 
+\index{Orb@{Orb}!Awake@{Awake}}
+\index{Awake@{Awake}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Orb.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_acedd36c3a5fda0166eb64205970a3df8}{spriteRenderer}}\ =\ GetComponentInChildren<SpriteRenderer>();}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_orb_a09bb8ecbb255e97fb24ff69386877949}\label{class_orb_a09bb8ecbb255e97fb24ff69386877949}} 
+\index{Orb@{Orb}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily float Orb.\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{curSpeed}};}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_orb_a09bb8ecbb255e97fb24ff69386877949_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}\label{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}} 
+\index{Orb@{Orb}!LongOrbFeedback@{LongOrbFeedback}}
+\index{LongOrbFeedback@{LongOrbFeedback}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{LongOrbFeedback()}{LongOrbFeedback()}}
+{\footnotesize\ttfamily void Orb.\+Long\+Orb\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}]\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}}.\mbox{\hyperlink{class_orb_line_aba4144936d587795cfe259a060183a74}{DecreaseTail}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_orb_a2c8e240892cf753aa0ad632cfd76eaab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_orb_a2c8e240892cf753aa0ad632cfd76eaab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf}\label{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf}} 
+\index{Orb@{Orb}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Orb.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}triggered\ kah\ min"{});}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}triggerer"{}})}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}{bait}})}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(time);}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_aa22470b9203ea9f97fc58978e4efb202}{triggered}}\ =\ \mbox{\hyperlink{class_orb_a50a793349aa0253be96ecf52cae829aa}{time}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//controller.delay\ =\ time;}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Destroy(gameObject);}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_af6dd05fb8c89ba0eae0e16389ca1e066}{EnterTrigger}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_orb_a15f8bef5e158a9dd9379571b8a8fc0cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_a557e5d0767d57e63d56fe4f38633b0ab}\label{class_orb_a557e5d0767d57e63d56fe4f38633b0ab}} 
+\index{Orb@{Orb}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Orb.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00101}{101}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}triggerer"{}})}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log(controller);}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*if\ (bait) }}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \{ }}
+\DoxyCodeLine{00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float\ between\ =\ triggered\ +\ ((time\ -\/\ triggered)); }}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ controller.delay\ =\ time; }}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(gameObject); }}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (bait)\ Destroy(gameObject);}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//else}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}what\ about\ this"{});}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_a4bd2da9f07e13b0d51d2b6cdd9993cc9}{LeaveTrigger}}(\mbox{\hyperlink{class_orb_a4520026b1ff316c7851aca6390e87625}{track}});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (collision.gameObject.name\ ==\ \textcolor{stringliteral}{"{}end"{}})}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destroy(gameObject,\ 0.1f);}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_orb_a557e5d0767d57e63d56fe4f38633b0ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_aab8f672dec11ddbd52e6ce96e965211e}\label{class_orb_aab8f672dec11ddbd52e6ce96e965211e}} 
+\index{Orb@{Orb}!SetTail@{SetTail}}
+\index{SetTail@{SetTail}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{SetTail()}{SetTail()}}
+{\footnotesize\ttfamily void Orb.\+Set\+Tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}{tail}}\ =\ transform.Find(\textcolor{stringliteral}{"{}tail"{}}).gameObject.GetComponent<\mbox{\hyperlink{class_orb_line}{OrbLine}}>();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ tail.length\ =\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ tail.speed\ =\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_orb_aab8f672dec11ddbd52e6ce96e965211e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_ab3077f6be09c465f66b44e30af3a4c81}\label{class_orb_ab3077f6be09c465f66b44e30af3a4c81}} 
+\index{Orb@{Orb}!ShortOrbFeedback@{ShortOrbFeedback}}
+\index{ShortOrbFeedback@{ShortOrbFeedback}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{ShortOrbFeedback()}{ShortOrbFeedback()}}
+{\footnotesize\ttfamily IEnumerator Orb.\+Short\+Orb\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}]\ ==\ \textcolor{keyword}{null})\ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a22be2ef06b33d64141feb31864923ba4}{orbFeedbackSprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(0.1f);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ Destroy(gameObject);}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_orb_ab3077f6be09c465f66b44e30af3a4c81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_orb_a162d2319dd72ef1f51c06fa32d1bdf9e}\label{class_orb_a162d2319dd72ef1f51c06fa32d1bdf9e}} 
+\index{Orb@{Orb}!Start@{Start}}
+\index{Start@{Start}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Orb.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}\ =\ \mbox{\hyperlink{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}{controller}}.\mbox{\hyperlink{class_rythm_controller_afacc9ece4cb12d7f2276ca05c2eca3de}{orbType}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a921a00bd30a77953ff05d521dbbfcede}{curSpeed}}\ =\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ spriteRenderer.sprite\ =\ \mbox{\hyperlink{class_orb_a2a489f03df83cd5c6f4941392d4550b7}{sprite}}[\mbox{\hyperlink{class_orb_a40639367aae0821e3b3270a15e6f6ae1}{spriteIndex}}];}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_orb_ae4e7adc9997a3300760430673e065e84}\label{class_orb_ae4e7adc9997a3300760430673e065e84}} 
+\index{Orb@{Orb}!Update@{Update}}
+\index{Update@{Update}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Orb.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ Vector3\ pos\ =\ transform.position;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ pos.y\ -\/=\ \mbox{\hyperlink{class_orb_a33e4cb5da26d4e9200073d3e441cba22}{speed}}\ *\ Time.deltaTime;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ transform.position\ =\ pos;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}}\ \&\&\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ ==\ 0f)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(\mbox{\hyperlink{class_orb_ab3077f6be09c465f66b44e30af3a4c81}{ShortOrbFeedback}}());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}}\ \&\&\ \mbox{\hyperlink{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}{longPress}}\ \&\&\ \mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_orb_a2c8e240892cf753aa0ad632cfd76eaab}{LongOrbFeedback}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_orb_ae4e7adc9997a3300760430673e065e84_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}\label{class_orb_aeb111ac1dfc209201d6ed8c5c93812f4}} 
+\index{Orb@{Orb}!bait@{bait}}
+\index{bait@{bait}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{bait}{bait}}
+{\footnotesize\ttfamily bool Orb.\+bait = false}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}\label{class_orb_a5c6f581f8c4ccedbe84d801e1aa7819e}} 
+\index{Orb@{Orb}!controller@{controller}}
+\index{controller@{controller}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} Orb.\+controller}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a921a00bd30a77953ff05d521dbbfcede}\label{class_orb_a921a00bd30a77953ff05d521dbbfcede}} 
+\index{Orb@{Orb}!curSpeed@{curSpeed}}
+\index{curSpeed@{curSpeed}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{curSpeed}{curSpeed}}
+{\footnotesize\ttfamily float Orb.\+cur\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a59bc0983f48b1a6582da8cbb6cc2bcb4}\label{class_orb_a59bc0983f48b1a6582da8cbb6cc2bcb4}} 
+\index{Orb@{Orb}!hitEffect@{hitEffect}}
+\index{hitEffect@{hitEffect}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{hitEffect}{hitEffect}}
+{\footnotesize\ttfamily Game\+Object Orb.\+hit\+Effect}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a2d80b2abb304403945e602a89c1c52c2}\label{class_orb_a2d80b2abb304403945e602a89c1c52c2}} 
+\index{Orb@{Orb}!length@{length}}
+\index{length@{length}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily float Orb.\+length}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}\label{class_orb_a887d27b631eb7f440c3be6b27b0d1d22}} 
+\index{Orb@{Orb}!longPress@{longPress}}
+\index{longPress@{longPress}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{longPress}{longPress}}
+{\footnotesize\ttfamily bool Orb.\+long\+Press = false}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a43e1c5a29aa6c0c24c1f44e03089365a}\label{class_orb_a43e1c5a29aa6c0c24c1f44e03089365a}} 
+\index{Orb@{Orb}!number@{number}}
+\index{number@{number}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily int Orb.\+number}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a22be2ef06b33d64141feb31864923ba4}\label{class_orb_a22be2ef06b33d64141feb31864923ba4}} 
+\index{Orb@{Orb}!orbFeedbackSprite@{orbFeedbackSprite}}
+\index{orbFeedbackSprite@{orbFeedbackSprite}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{orbFeedbackSprite}{orbFeedbackSprite}}
+{\footnotesize\ttfamily Sprite \mbox{[}$\,$\mbox{]} Orb.\+orb\+Feedback\+Sprite}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a33f38ae1ecb038e2a46c067c73be4115}\label{class_orb_a33f38ae1ecb038e2a46c067c73be4115}} 
+\index{Orb@{Orb}!pressed@{pressed}}
+\index{pressed@{pressed}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily bool Orb.\+pressed = false}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a33e4cb5da26d4e9200073d3e441cba22}\label{class_orb_a33e4cb5da26d4e9200073d3e441cba22}} 
+\index{Orb@{Orb}!speed@{speed}}
+\index{speed@{speed}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Orb.\+speed}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a2a489f03df83cd5c6f4941392d4550b7}\label{class_orb_a2a489f03df83cd5c6f4941392d4550b7}} 
+\index{Orb@{Orb}!sprite@{sprite}}
+\index{sprite@{sprite}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily Sprite \mbox{[}$\,$\mbox{]} Orb.\+sprite}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a40639367aae0821e3b3270a15e6f6ae1}\label{class_orb_a40639367aae0821e3b3270a15e6f6ae1}} 
+\index{Orb@{Orb}!spriteIndex@{spriteIndex}}
+\index{spriteIndex@{spriteIndex}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{spriteIndex}{spriteIndex}}
+{\footnotesize\ttfamily int Orb.\+sprite\+Index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_acedd36c3a5fda0166eb64205970a3df8}\label{class_orb_acedd36c3a5fda0166eb64205970a3df8}} 
+\index{Orb@{Orb}!spriteRenderer@{spriteRenderer}}
+\index{spriteRenderer@{spriteRenderer}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
+{\footnotesize\ttfamily Sprite\+Renderer Orb.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a2de672fdb30865f73f0d97ecaca164ff}\label{class_orb_a2de672fdb30865f73f0d97ecaca164ff}} 
+\index{Orb@{Orb}!success@{success}}
+\index{success@{success}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{success}{success}}
+{\footnotesize\ttfamily bool Orb.\+success = false}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}\label{class_orb_abb637707fbd5bc6598a2f6abe9c7728a}} 
+\index{Orb@{Orb}!tail@{tail}}
+\index{tail@{tail}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orb_line}{Orb\+Line}} Orb.\+tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a50a793349aa0253be96ecf52cae829aa}\label{class_orb_a50a793349aa0253be96ecf52cae829aa}} 
+\index{Orb@{Orb}!time@{time}}
+\index{time@{time}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Orb.\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_a4520026b1ff316c7851aca6390e87625}\label{class_orb_a4520026b1ff316c7851aca6390e87625}} 
+\index{Orb@{Orb}!track@{track}}
+\index{track@{track}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{track}{track}}
+{\footnotesize\ttfamily int Orb.\+track}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+\mbox{\Hypertarget{class_orb_aa22470b9203ea9f97fc58978e4efb202}\label{class_orb_aa22470b9203ea9f97fc58978e4efb202}} 
+\index{Orb@{Orb}!triggered@{triggered}}
+\index{triggered@{triggered}!Orb@{Orb}}
+\doxysubsubsection{\texorpdfstring{triggered}{triggered}}
+{\footnotesize\ttfamily float Orb.\+triggered}
+
+
+
+Definition at line \mbox{\hyperlink{_orb_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_orb_8cs_source}{Orb.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_orb_8cs}{Orb.\+cs}}\end{DoxyCompactItemize}

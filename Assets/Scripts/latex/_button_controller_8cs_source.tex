@@ -1,0 +1,91 @@
+\hypertarget{_button_controller_8cs_source}{}\doxysection{Button\+Controller.\+cs}
+\mbox{\hyperlink{_button_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00003}\mbox{\hyperlink{class_button_controller}{00003}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_controller}{ButtonController}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00005}\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00006}\mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}}\ =\ .5f;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00007}\mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00008}\mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_rythm_controller}{RythmController}}\ \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00009}\mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ SpriteRenderer\ \mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00010}\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{00010}}\ \ \ \ \ \mbox{\hyperlink{class_orb}{Orb}}\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00011}\mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{00011}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00013}\mbox{\hyperlink{class_button_controller_a516193cee040de9deeab850397cbb71e}{00013}}\ \ \ \ \ Vector3\ \mbox{\hyperlink{class_button_controller_a516193cee040de9deeab850397cbb71e}{touchPosWorld}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00014}\mbox{\hyperlink{class_button_controller_af3f1a22289a4ca3290036b6686e1d168}{00014}}\ \ \ \ \ Vector2\ \mbox{\hyperlink{class_button_controller_af3f1a22289a4ca3290036b6686e1d168}{touchPosWorld2D}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00015}\mbox{\hyperlink{class_button_controller_a3adf52c76e9494ee8b8d0361392d9b83}{00015}}\ \ \ \ \ RaycastHit2D\ \mbox{\hyperlink{class_button_controller_a3adf52c76e9494ee8b8d0361392d9b83}{hitInformation}};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//Change\ me\ to\ change\ the\ touch\ phase\ used.}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//TouchPhase\ touchPhase\ =\ TouchPhase.Ended;}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00019}\mbox{\hyperlink{class_button_controller_ae3d1d9b7b165b02c97fe90330176d779}{00019}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_controller_ae3d1d9b7b165b02c97fe90330176d779}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a757ace4ab028c5b2cf0cc5f0e9059402}{sprite}}\ =\ GetComponent<SpriteRenderer>();}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00023}\mbox{\hyperlink{class_button_controller_a0925d59c54b2b7762aee924e64e84c82}{00023}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_controller_a0925d59c54b2b7762aee924e64e84c82}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}})}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Input.GetKeyDown(\mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}]))}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ sprite.color\ =\ \textcolor{keyword}{new}\ Color(.5f,\ .5f,\ .5f);}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}}();}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Input.GetKeyUp(\mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a05fed11cb9af2534408101d9781eba34}{keys}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}]))}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ sprite.color\ =\ \textcolor{keyword}{new}\ Color(1f,\ 1f,\ 1f);}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}}();}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00044}\mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_controller_a22c12312bc6a2039139daaf195e8e468}{Press}}()}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}\ =\ \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a5863fac5484ff57f439e12656c707e10}{pressable}}[\mbox{\hyperlink{class_button_controller_a5be1abdd41eba6d4579de68809a37a29}{number}}];}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}\ !=\ \textcolor{keyword}{null}\ \&\&\ !\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a33f38ae1ecb038e2a46c067c73be4115}{pressed}})}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ orb.pressed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orb.speed\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orb.longPress\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00059}\mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_controller_af0e3eaa007fa1dbdb302a54766d8af68}{Leave}}()}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_ae7fc58635d0dcf123103d2aee246a6de}{clicking}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ orb.speed\ =\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a09bb8ecbb255e97fb24ff69386877949}{GetCurrentSpeed}}();}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ orb.longPress\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ >\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ -\/\ \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}}/2\ \&\&\ \mbox{\hyperlink{class_button_controller_aa36692e511702bf41c2db8096e6e703e}{time}}\ <\ \mbox{\hyperlink{class_button_controller_aa0a1925110ee34c9984e0e8c44381dbe}{orb}}.\mbox{\hyperlink{class_orb_a2d80b2abb304403945e602a89c1c52c2}{length}}\ +\ \mbox{\hyperlink{class_button_controller_acc30e690f0fd4fbcbda36a7a2d6897aa}{tolerance}}\ /\ 2)}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ controller.score\ +=\ 100;}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ orb.success\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_controller_a703b84ef727ae4d2f13488a1f6e18e80}{controller}}.\mbox{\hyperlink{class_rythm_controller_a8c4bbeff7fba9931e392029b8285ba24}{Miss}}();}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00077}00077\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00078}00078\ \textcolor{comment}{\ \ \ \ private\ void\ OnMouseDown()}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ Press();}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00082}00082\ \textcolor{comment}{\ \ \ \ private\ void\ OnMouseUp()}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ Leave();}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{\Hypertarget{_button_controller_8cs_source_l00086}00086\ \}}
+
+\end{DoxyCode}

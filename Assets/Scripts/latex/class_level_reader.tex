@@ -1,0 +1,117 @@
+\hypertarget{class_level_reader}{}\doxysection{Level\+Reader Class Reference}
+\label{class_level_reader}\index{LevelReader@{LevelReader}}
+
+
+Inheritance diagram for Level\+Reader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_level_reader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Reader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_level_reader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_level_reader_ab8457d0d46f1495a0b537087774ed82e}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Asset \mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{text\+Json}}
+\item 
+\mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythm\+Controller}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audio\+Source}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_level_reader_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_level_reader_8cs_source}{Level\+Reader.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_reader_ab8457d0d46f1495a0b537087774ed82e}\label{class_level_reader_ab8457d0d46f1495a0b537087774ed82e}} 
+\index{LevelReader@{LevelReader}!Start@{Start}}
+\index{Start@{Start}!LevelReader@{LevelReader}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Level\+Reader.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_reader_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_level_reader_8cs_source}{Level\+Reader.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{textJson}}\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_ab5a615fb40dc37eb6e9da7d38a3dcc20}{levelJSON}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythmController}}\ =\ GetComponent<RythmController>();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audioSource}}\ =\ GetComponent<AudioSource>();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ rythmController.blocks\ =\ JsonUtility.FromJson<\mbox{\hyperlink{class_blocks}{Blocks}}>(\mbox{\hyperlink{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}{textJson}}.text);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ rythmController.blockSpeed\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_a7a3732d88888e672f51ba07d10dc1c2b}{speed}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ audioSource.clip\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{instance}}.\mbox{\hyperlink{class_game_manager_a6b495211e75a6a2c33356705e796aa4f}{levelMusic}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Debug.Log("{}halo"{});}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}{audioSource}}.Play();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}{rythmController}}.\mbox{\hyperlink{class_rythm_controller_aacfb8866383d86b67a8ba0bd1aa46b19}{StartLevel}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_level_reader_ab8457d0d46f1495a0b537087774ed82e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}\label{class_level_reader_a0d06a148cf3fccc0a840c59877e25733}} 
+\index{LevelReader@{LevelReader}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!LevelReader@{LevelReader}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily Audio\+Source Level\+Reader.\+audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_reader_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_level_reader_8cs_source}{Level\+Reader.\+cs}}.
+
+\mbox{\Hypertarget{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}\label{class_level_reader_ac1ee5f70ab9e759be5c468520955d261}} 
+\index{LevelReader@{LevelReader}!rythmController@{rythmController}}
+\index{rythmController@{rythmController}!LevelReader@{LevelReader}}
+\doxysubsubsection{\texorpdfstring{rythmController}{rythmController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rythm_controller}{Rythm\+Controller}} Level\+Reader.\+rythm\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_reader_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_level_reader_8cs_source}{Level\+Reader.\+cs}}.
+
+\mbox{\Hypertarget{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}\label{class_level_reader_a686adbb09da0f0c3b491f3e9333df904}} 
+\index{LevelReader@{LevelReader}!textJson@{textJson}}
+\index{textJson@{textJson}!LevelReader@{LevelReader}}
+\doxysubsubsection{\texorpdfstring{textJson}{textJson}}
+{\footnotesize\ttfamily Text\+Asset Level\+Reader.\+text\+Json\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_level_reader_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_level_reader_8cs_source}{Level\+Reader.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_level_reader_8cs}{Level\+Reader.\+cs}}\end{DoxyCompactItemize}
